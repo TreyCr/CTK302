@@ -5,7 +5,6 @@ function setup() {
 }
 
 function draw() {
-  background(97, 104, 120);
   push();
   translate(x, 0);
   avatar();
@@ -16,19 +15,13 @@ function draw() {
   }
 }
 
-function bg() {
-  if (mouseIsPressed) {
-    background(97, 104, 120);
-  } else {
-    background(131, 173, 195);
-  }
-}
-
 function avatar() {
+
 
   if (mouseIsPressed) {
 
     noStroke();
+    background(97, 104, 120);
 
     //roof/backshell
     fill(69, 76, 92);
@@ -85,6 +78,7 @@ function avatar() {
     } else {
 
     noStroke();
+    background(131, 173, 195);
 
     //houseBASE
     fill(195, 195, 195);
@@ -121,5 +115,52 @@ function avatar() {
     //garageROOF
     fill(69, 76, 92);
     quad(570, 400, 727, 400, 764, 455, 533, 455);
+
   }
+}
+
+function text();
+
+  if(mouseIsPressed){
+    let s = "When the town begins to move you hear these screams turn to creaks of wood almost as if the owner is being crushed by the house. This makes me wonder if the humans are becoming more than just homeowners rather they are becoming the homes.";
+    text(s, 50, 25, 300, 300);
+  } else {
+    let s = "In the small ghost town of Strathmore, not everything is as it seems. Something isn't wrong about this place but something definitely isn't right. During the night, its almost as if the town moves around. There are still a few humans here but it seemed about the same time as the town began to wonder a majority of the people wandered with it and haven't been seen since...";
+    text(s, 175, 25, 400, 300);
+    }
+  }
+
+function ground() {
+
+  //sun
+  fill(247, 217, 180);
+  circle(475, 75, 100);
+
+  //treetrunk
+  fill(107, 79, 0);
+  rect(219, 500, 50, 100);
+
+  //treeleavesBOT
+  fill(3, 100, 9);
+  triangle(168, 509, 318, 509, 244, 417);
+
+  //treeleavesMID
+  fill(3, 100, 9);
+  triangle(168, 450, 318, 450, 244, 360);
+
+  //treeleavesTOP
+  fill(3, 100, 9);
+  triangle(168, 400, 318, 400, 244, 300);
+
+  //grass
+  fill(73, 130, 93);
+  rect(0, 570, 1280, 150);
+
+  //sidewalk
+  fill(150, 150, 150);
+  rect(850, 570, 50, 500);
+
+  //sidewalkROAD
+  fill(150, 150, 150);
+  rect(0, 630, 1280, 150);
 }

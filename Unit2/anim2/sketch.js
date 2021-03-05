@@ -12,7 +12,7 @@ function draw() {
   pop();
   x+=10;
   if (x>width) {
-    x=-1000
+    x=-600
   }
 }
 
