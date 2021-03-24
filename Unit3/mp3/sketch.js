@@ -41,7 +41,6 @@ function setup() {
 function draw() {
   switch (myState) {
     case 0:
-    menuS.play();
     image(bgStart, width/2, height/2);
       break;
 
