@@ -53,7 +53,7 @@ function setup() {
 
 function draw() {
 
-  background('#c6f5ff'); // light blue
+  background(bgIG, width/2, height/2); // light blue
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
@@ -88,7 +88,6 @@ function draw() {
   }
 
   // MORE DECORATIONS - write that pretty ATK type on top.
-  image(bgIG, width/2, height/2, )
   textSize(40);
   textAlign(CENTER);
   text("your words or image here!", width / 2, 600, windowWidth - 200, windowHeight - 200);
