@@ -41,9 +41,6 @@ function setup() {
 
   // load any images you need
   //bunnyImage = loadImage("assets/bunny.jpg");
-  star = loadImage("assets/Star1.png");
-  ship = loadImage("assets/Ship1.png");
-  bgIG = loadImage("assets/background(ingame).png");
   imageMode(CENTER);
   rectMode(CENTER);
   noStroke();
@@ -51,7 +48,7 @@ function setup() {
 
 function draw() {
 
-  background('purple'); // light blue
+  background(100, 65, 150); // light blue
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
@@ -66,7 +63,7 @@ function draw() {
   //  rotate(radians(alpha)); // using alpha in here so it doesn't feel bad
 
   // draw the FROG
-  image(ship, 0, 0, 500, 500);
+  image(ship, 50, 50, 50, 50);
   // fill('green');
   // ellipse(0, 0, 80, 80);
   pop();
@@ -88,7 +85,10 @@ function draw() {
   // MORE DECORATIONS - write that pretty ATK type on top.
   textSize(40);
   textAlign(CENTER);
-  text("Reach for the stars. Well... just catch them really. :D", width / 2, 600, windowWidth - 200, windowHeight - 200);
+  fill('black');
+  text("Reach for the stars. \n Well... just catch them really. \n :D", width / 2, 600, windowWidth - 200, windowHeight - 207);
+  fill('white');
+  text("Reach for the stars. \n Well... just catch them really. \n :D", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
 
   // Debugging information -- take this out when you're ready for production!
