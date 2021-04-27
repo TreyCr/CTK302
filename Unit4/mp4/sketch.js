@@ -63,7 +63,7 @@ function draw() {
   //  rotate(radians(alpha)); // using alpha in here so it doesn't feel bad
 
   // draw the FROG
-  image(ship, 0, 0, 10, 10);
+  image(ship, 0, 0, 25, 25);
   // fill('green');
   // ellipse(0, 0, 80, 80);
   pop();
@@ -86,9 +86,9 @@ function draw() {
   textSize(40);
   textAlign(CENTER);
   fill('black');
-  text("Reach for the stars. \n Well... just catch them really. \n :D", width / 2, 600, windowWidth - 200, windowHeight - 207);
+  text("Reach for the stars. \n Well... just catch them really. \n :D", width / 2, 600, windowWidth - 200, windowHeight - 107);
   fill('white');
-  text("Reach for the stars. \n Well... just catch them really. \n :D", width / 2, 600, windowWidth - 200, windowHeight - 200);
+  text("Reach for the stars. \n Well... just catch them really. \n :D", width / 2, 600, windowWidth - 200, windowHeight - 100);
 
 
   // Debugging information -- take this out when you're ready for production!
