@@ -21,6 +21,10 @@ function setup() {
 
   createCanvas(windowWidth, windowHeight);
 
+    star = loadImage("assets/Star1.png");
+    ship = loadImage("assets/Ship1.png");
+    bgIG = loadImage("assets/background(ingame).png");
+
   // initialize accelerometer variables
   alpha = 0;
   beta = 0;
@@ -37,15 +41,9 @@ function setup() {
 
   // load any images you need
   //bunnyImage = loadImage("assets/bunny.jpg");
-  stars[0] = loadImage("assets/Star1.png");
-  stars[1] = loadImage("assets/Star2.png");
   star = loadImage("assets/Star1.png");
   ship = loadImage("assets/Ship1.png");
-  bgStart = loadImage("assets/background(start).png");
   bgIG = loadImage("assets/background(ingame).png");
-  bgLose = loadImage("assets/background(lose).png");
-  bgWin = loadImage("assets/background(win).png");
-  menuS = loadSound ("assets/menu.mp3");
   imageMode(CENTER);
   rectMode(CENTER);
   noStroke();
@@ -53,7 +51,7 @@ function setup() {
 
 function draw() {
 
-  background(bgIG, width/2, height/2); // light blue
+  background('purple'); // light blue
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
@@ -68,7 +66,7 @@ function draw() {
   //  rotate(radians(alpha)); // using alpha in here so it doesn't feel bad
 
   // draw the FROG
-  image(ship, 0, 0, 50, 50);
+  image(ship, 0, 0, 500, 500);
   // fill('green');
   // ellipse(0, 0, 80, 80);
   pop();
@@ -90,7 +88,7 @@ function draw() {
   // MORE DECORATIONS - write that pretty ATK type on top.
   textSize(40);
   textAlign(CENTER);
-  text("your words or image here!", width / 2, 600, windowWidth - 200, windowHeight - 200);
+  text("Reach for the stars. Well... just catch them really. :D", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
 
   // Debugging information -- take this out when you're ready for production!
