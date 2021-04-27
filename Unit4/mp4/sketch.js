@@ -48,7 +48,9 @@ function setup() {
 
 function draw() {
 
-  background(100, 65, 150); // light blue
+  background(100, 65, 150);
+
+  image(bgIG, width/2, height/2 , windowWidth, windowHeight);
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
@@ -86,9 +88,9 @@ function draw() {
   textSize(40);
   textAlign(CENTER);
   fill('black');
-  text("Reach for the stars. \n Well... just catch them really. \n :D", width / 2, 600, windowWidth - 200, windowHeight - 57);
+  text("Reach for the stars. \n Well... just catch them really. \n :D", width / 2, 600, windowWidth - 200, windowHeight - 27);
   fill('white');
-  text("Reach for the stars. \n Well... just catch them really. \n :D", width / 2, 600, windowWidth - 200, windowHeight - 50);
+  text("Reach for the stars. \n Well... just catch them really. \n :D", width / 2, 600, windowWidth - 200, windowHeight - 20);
 
 
   // Debugging information -- take this out when you're ready for production!
