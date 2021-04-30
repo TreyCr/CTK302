@@ -22,7 +22,7 @@ function setup() {
 
 function draw() {
 
-  background('#c6f5ff'); // light blue
+  background('purple'); // light blue
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
@@ -60,9 +60,9 @@ function draw() {
   // Text that makes CTK type in the background
   fill('white');
   noStroke();
-  textSize(300);
+  textSize(100);
   textAlign(CENTER);
-  text("ctk", width / 2, height / 2);
+  text("cute little wolf", width / 2, height / 2);
 
 }
 
