@@ -38,7 +38,7 @@ function gotData(data) {
 
 
 function draw() {
-  background('blue');
+  background('yellow');
 
   // // iterate through the bubbles and display the objects!
   for (let i = 0; i < bubbles.length; i++) {
