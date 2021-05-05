@@ -1,10 +1,11 @@
 
 var bubbles = [];
+var mvsd;
 
 function setup() {
 
   // Tabletop stuff, for getting google spreadsheet data in.
-  let url = '11ZweXTQBuEVyzHe7ZukHfcczlLrVbaXwU4rWl5jNw14'; // this is KEY of the URL from the sheet
+  let url = '1g-SKN1HnJ-bnSc6tBbqQdGwi4_RzoAxz8w3AHJRjcFE'; // this is KEY of the URL from the sheet
   let settings = {
     key: url, // The url of the published google sheet
     callback: gotData, // A callback for when the data comes in
@@ -16,10 +17,12 @@ function setup() {
 
 
   // Regular setup code we usually have
-  createCanvas(600, 600);
+  createCanvas(1200, 776);
   textAlign(CENTER);
   ellipseMode(CENTER);
   rectMode(CENTER);
+
+  MvsD = loadImage("assets/mvd.jpg");
 
 }
 
@@ -31,14 +34,14 @@ function gotData(data) {
 
   // iterate through the array of data and create an object and push it on an array called bubbles
   for (let i = 0; i < data.length; i++) {
-    bubbles.push(new Bubble(data[i].Name, data[i].Shape)); // THESE Name and Shape need to match your column names in your spreadsheet!
+    bubbles.push(new Bubble(data[i].Animal, data[i].Comic, data[i].Production)); // THESE Name and Shape need to match your column names in your spreadsheet!
   }
 
 }
 
 
 function draw() {
-  background('yellow');
+  image(MvsD, 0, 0, 1200, 776);
 
   // // iterate through the bubbles and display the objects!
   for (let i = 0; i < bubbles.length; i++) {
@@ -51,22 +54,27 @@ function draw() {
 // my Bubble class
 class Bubble {
 
-  constructor(myName, myShape) {
-    this.name = myName;
-    this.shape = myShape;
+  constructor(myAnimal, myComic, myProduction) {
+    this.Animal = myAnimal;
+    this.Comic = myComic;
+    this.Production = myProduction;
     this.pos = createVector(random(width), random(height));
 
   }
 
 
   display() {
-    if (this.shape == "Square") {
-      rect(this.pos.x, this.pos.y, 50, 50);
-    } else {
-      ellipse(this.pos.x, this.pos.y, 50, 50);
-    }
 
-    text(this.name, this.pos.x, this.pos.y);
+    if (this.Comic == "Marvel") {
+    rect(this.pos.x, this.pos.y-20, 80, 80);
+  } else {
+    ellipse(this.pos.x, this.pos.y-20, 80, 80);
+  }
+
+    // ellipse(this.pos.x, this.pos.y-20, 80, 80);
+    text(this.Animal, this.pos.x, this.pos.y);
+    text(this.Comic, this.pos.x, this.pos.y-15);
+    text(this.Production, this.pos.x, this.pos.y-30);
   }
 
 
